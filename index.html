@@ -3,415 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepal Himalayan Journeys | Premium Trekking & Adventure Tours</title>
+    <title>Nepal Himalayan Journeys | WhatsApp Inquiry Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            /* Color Palette - Premium & Modern */
-            --primary: #0A2463;
-            --primary-dark: #071A4A;
-            --primary-light: #1E40AF;
-            --primary-lighter: #3B82F6;
-            --secondary: #25D366;
-            --secondary-dark: #128C7E;
-            --accent: #FF6B35;
-            --accent-light: #FF8C42;
-            --light: #F8FAFC;
-            --light-gray: #F1F5F9;
-            --gray: #64748B;
-            --dark: #0F172A;
-            --dark-gray: #334155;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --error: #EF4444;
-            
-            /* Gradients */
-            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
-            --gradient-light: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
-            
-            /* Shadows - Premium depth */
-            --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-            --shadow-2xl: 0 50px 100px -20px rgba(0, 0, 0, 0.15);
-            
-            /* Transitions - Smooth and premium */
-            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Border Radius - Modern rounded corners */
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 20px;
-            --radius-2xl: 24px;
-            --radius-full: 9999px;
-            
-            /* Spacing System */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem;
-            --space-2xl: 4rem;
-        }
-
-        /* Reset & Base Styles */
+        /* CSS Reset with Performance Focus */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        :root {
+            /* Simplified Color Palette */
+            --primary: #0A2463;
+            --secondary: #25D366;
+            --accent: #FF6B35;
+            --light: #FFFFFF;
+            --dark: #0F172A;
+            --gray: #64748B;
+            --light-gray: #F1F5F9;
+            
+            /* Performance Optimizations */
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.2s ease;
+        }
+
+        /* Hardware Acceleration for Smooth Scrolling */
         html {
-            font-size: 16px;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
             scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #F0F4F8 0%, #E6EFF8 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #F8FAFC;
             color: var(--dark);
-            line-height: 1.7;
+            line-height: 1.5;
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative;
-            font-weight: 400;
-            letter-spacing: -0.01em;
+            /* Enable GPU acceleration */
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000;
+            will-change: scroll-position;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(37, 211, 102, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(10, 36, 99, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(255, 107, 53, 0.02) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        /* Typography System */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            color: var(--dark);
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-        }
-
-        .text-gradient {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Layout */
+        /* Optimized Container */
         .container {
-            width: 100%;
-            max-width: 1280px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 var(--space-md);
+            padding: 16px;
         }
 
-        .page-wrapper {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header - Premium Design */
+        /* Optimized Header - Simplified */
         .header {
-            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #1E40AF 100%);
+            color: white;
+            padding: 24px 16px;
+            margin-bottom: 24px;
+            border-radius: var(--radius);
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .header-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            z-index: -2;
-        }
-
-        .header-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(45deg, transparent 65%, rgba(255, 255, 255, 0.1) 65%, rgba(255, 255, 255, 0.1) 70%, transparent 70%),
-                linear-gradient(-45deg, transparent 65%, rgba(255, 255, 255, 0.1) 65%, rgba(255, 255, 255, 0.1) 70%, transparent 70%);
-            background-size: 50px 50px;
-            opacity: 0.3;
-        }
-
-        .logo-container {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-            position: relative;
-        }
-
-        .logo-icon {
-            font-size: clamp(3rem, 8vw, 5rem);
+        .logo {
+            font-size: 42px;
+            margin-bottom: 16px;
             color: white;
-            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
-            margin-bottom: var(--space-md);
-            display: inline-block;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            33% { transform: translateY(-15px) rotate(2deg); }
-            66% { transform: translateY(-10px) rotate(-2deg); }
+            animation: none; /* Disabled animation for performance */
         }
 
         .company-name {
-            color: white;
-            margin-bottom: var(--space-sm);
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
         .tagline {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 300;
-            line-height: 1.6;
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .whatsapp-badge {
             display: inline-flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: 12px;
             background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            padding: var(--space-sm) var(--space-lg);
-            border-radius: var(--radius-full);
-            margin-top: var(--space-lg);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: var(--transition-normal);
-        }
-
-        .whatsapp-badge:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            padding: 12px 24px;
+            border-radius: 50px;
+            margin-top: 16px;
         }
 
         .whatsapp-badge i {
-            font-size: 1.5rem;
             color: var(--secondary);
+            font-size: 20px;
         }
 
-        .whatsapp-badge span {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        /* Main Content */
-        .main-content {
-            flex: 1;
-            padding: var(--space-xl) 0;
-        }
-
-        /* Form Container - Premium Card */
+        /* Form Container - Performance Optimized */
         .form-container {
-            background: white;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-2xl);
-            padding: var(--space-2xl);
-            margin-bottom: var(--space-2xl);
+            background: var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-bottom: 32px;
             position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: var(--gradient-accent);
-        }
-
-        .form-container::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
-            pointer-events: none;
+            /* GPU acceleration */
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .form-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
-            gap: var(--space-md);
-            margin-bottom: var(--space-xl);
-            position: relative;
+            gap: 12px;
         }
 
-        .form-title i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Form Elements - Premium Styling */
+        /* Form Elements - Minimal for Performance */
         .form-group {
-            margin-bottom: var(--space-xl);
+            margin-bottom: 24px;
         }
 
         .form-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-lg);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .form-row {
+                flex-direction: row;
+            }
+            
+            .form-row > * {
+                flex: 1;
+            }
         }
 
         label {
             display: block;
-            margin-bottom: var(--space-sm);
             font-weight: 600;
             color: var(--dark);
-            font-size: 0.95rem;
-            letter-spacing: 0.02em;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
 
         .required::after {
             content: " *";
-            color: var(--error);
-        }
-
-        .input-wrapper {
-            position: relative;
+            color: #EF4444;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 1rem 1.25rem;
-            font-size: 1rem;
+            padding: 14px 16px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 16px;
             font-family: 'Inter', sans-serif;
             background: var(--light);
-            border: 2px solid var(--light-gray);
-            border-radius: var(--radius-md);
-            color: var(--dark);
-            transition: var(--transition-normal);
+            transition: var(--transition);
+            /* Prevent text size adjustment on mobile */
+            -webkit-text-size-adjust: 100%;
+            /* Remove default iOS styling */
+            -webkit-appearance: none;
             appearance: none;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--primary);
-            background: white;
-            box-shadow: 0 0 0 4px rgba(10, 36, 99, 0.1);
-            transform: translateY(-1px);
+            box-shadow: 0 0 0 3px rgba(10, 36, 99, 0.1);
         }
 
-        .input-icon {
-            position: absolute;
-            right: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-            pointer-events: none;
+        /* Custom select arrow */
+        select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 48px;
         }
 
-        textarea {
-            min-height: 140px;
-            resize: vertical;
-            padding: 1.25rem;
-        }
-
-        textarea + .input-icon {
-            top: 1.25rem;
-            transform: none;
-        }
-
-        /* Custom Select Styling */
-        .select-wrapper {
-            position: relative;
-        }
-
-        .select-wrapper::after {
-            content: '▼';
-            position: absolute;
-            right: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-            pointer-events: none;
-            font-size: 0.75rem;
-        }
-
-        /* Radio & Checkbox Groups - Premium */
+        /* Radio & Checkbox Groups - Simplified */
         .radio-group, .checkbox-group {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-md);
-            margin-top: var(--space-sm);
+            gap: 12px;
+            margin-top: 8px;
         }
 
         .radio-option, .checkbox-option {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            cursor: pointer;
-            padding: 0.75rem 1rem;
-            background: var(--light);
-            border-radius: var(--radius-md);
-            transition: var(--transition-normal);
-            border: 2px solid transparent;
-            flex: 1;
-            min-width: 140px;
-        }
-
-        .radio-option:hover, .checkbox-option:hover {
+            gap: 8px;
+            padding: 10px 14px;
             background: var(--light-gray);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
+            border-radius: 8px;
+            flex: 1;
+            min-width: 120px;
         }
 
         .radio-option input, .checkbox-option input {
@@ -419,908 +226,527 @@
             margin: 0;
         }
 
-        .radio-option input[type="radio"] {
-            accent-color: var(--primary);
-        }
-
-        .checkbox-option input[type="checkbox"] {
-            accent-color: var(--secondary);
-        }
-
-        .checkbox-option.checked {
-            border-color: var(--secondary);
-            background: rgba(37, 211, 102, 0.05);
-        }
-
-        /* Destination Sections */
-        .destinations-section {
-            background: var(--light-gray);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            margin-bottom: var(--space-xl);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-lg);
-            color: var(--primary);
-        }
-
-        .section-title i {
-            color: var(--accent);
-        }
-
+        /* Destinations Grid - Optimized for Mobile */
         .destinations-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: var(--space-md);
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 8px;
         }
 
-        /* Submit Button - Premium Styling */
+        @media (max-width: 480px) {
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Submit Button - No Complex Effects */
         .submit-section {
             text-align: center;
-            margin-top: var(--space-2xl);
-            padding-top: var(--space-xl);
+            margin-top: 32px;
+            padding-top: 24px;
             border-top: 1px solid var(--light-gray);
-            position: relative;
         }
 
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-md);
-            background: var(--gradient-secondary);
+            gap: 12px;
+            background: linear-gradient(135deg, var(--secondary) 0%, #128C7E 100%);
             color: white;
-            padding: 1.25rem 3rem;
-            font-size: 1.125rem;
+            padding: 16px 32px;
+            font-size: 16px;
             font-weight: 600;
             font-family: 'Outfit', sans-serif;
             border: none;
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius);
             cursor: pointer;
-            transition: var(--transition-normal);
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            min-width: 300px;
-            letter-spacing: 0.02em;
+            transition: var(--transition);
+            min-width: 280px;
+            /* Prevent sticky hover on mobile */
+            -webkit-tap-highlight-color: transparent;
         }
 
         .btn-whatsapp:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 50px -12px rgba(37, 211, 102, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
         }
 
         .btn-whatsapp:active {
-            transform: translateY(-1px);
+            transform: translateY(0);
         }
 
-        .btn-whatsapp::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: var(--transition-normal);
-        }
-
-        .btn-whatsapp:hover::before {
-            left: 100%;
-        }
-
-        .btn-whatsapp i {
-            font-size: 1.5rem;
-        }
-
-        .submit-note {
-            margin-top: var(--space-md);
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-style: italic;
-        }
-
-        /* Footer - Premium Design */
+        /* Footer - Simplified */
         .footer {
-            background: var(--gradient-dark);
+            background: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
             color: white;
-            padding: var(--space-2xl) 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .footer-content {
-            position: relative;
-            z-index: 1;
+            padding: 32px 16px;
+            border-radius: var(--radius);
             text-align: center;
-        }
-
-        .footer-logo {
-            font-size: 3rem;
-            margin-bottom: var(--space-lg);
-            color: var(--secondary);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-lg);
-            margin: var(--space-xl) 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
         }
 
         .contact-item {
+            padding: 16px;
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: var(--radius-lg);
-            padding: var(--space-lg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: var(--space-sm);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: var(--transition-normal);
+            border-radius: 8px;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
+        /* Performance Optimizations */
+        /* Reduce paint areas */
+        * {
+            contain: layout style paint;
         }
 
-        .contact-item i {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: var(--space-sm);
+        /* Optimize images */
+        img {
+            content-visibility: auto;
         }
 
-        .contact-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: 500;
+        /* Reduce composite layers */
+        .form-container, .header, .footer {
+            isolation: isolate;
         }
 
-        .contact-value {
-            font-size: 1.1rem;
-            font-weight: 600;
+        /* Fast scrolling optimization */
+        .form-container, .destinations-grid, .contact-grid {
+            will-change: transform;
         }
 
-        .copyright {
-            margin-top: var(--space-xl);
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .form-container {
-                padding: var(--space-xl);
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .destinations-grid {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
-        }
-
+        /* Remove animations on mobile for better performance */
         @media (max-width: 768px) {
-            .header {
-                padding: var(--space-lg) 0;
+            * {
+                animation: none !important;
+                transition: none !important;
             }
             
-            .form-container {
-                padding: var(--space-lg);
-            }
-            
-            .radio-group, .checkbox-group {
-                flex-direction: column;
-            }
-            
-            .radio-option, .checkbox-option {
-                min-width: 100%;
-            }
-            
-            .btn-whatsapp {
-                min-width: 100%;
-                padding: 1rem 2rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 0 var(--space-sm);
+            .btn-whatsapp:hover {
+                transform: none;
             }
         }
 
-        @media (max-width: 480px) {
-            :root {
-                --space-xl: 2rem;
-                --space-2xl: 3rem;
+        /* Optimize for iOS */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-overflow-scrolling: touch;
             }
             
-            .form-container {
-                padding: var(--space-md);
-                border-radius: var(--radius-lg);
-            }
-            
-            .logo-icon {
-                font-size: 3.5rem;
-            }
-            
-            .whatsapp-badge {
-                flex-direction: column;
-                text-align: center;
-                padding: var(--space-sm);
-            }
-            
-            .btn-whatsapp {
-                font-size: 1rem;
+            input, select, textarea {
+                font-size: 16px; /* Prevent zoom on focus in iOS */
             }
         }
 
-        /* Animation Classes */
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
+        /* Performance classes */
+        .will-change-transform {
+            will-change: transform;
         }
 
-        .slide-up {
-            animation: slideUp 0.6s ease-out;
+        .hardware-accelerated {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--light-gray);
-            border-radius: var(--radius-full);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient-primary);
-            border-radius: var(--radius-full);
-            border: 2px solid var(--light-gray);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-light);
+        /* Notification - Performance Optimized */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            display: none;
+            z-index: 10000;
+            transform: translateZ(0);
+            max-width: 300px;
         }
     </style>
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="container">
         <!-- Header -->
-        <header class="header">
-            <div class="header-background"></div>
-            <div class="container">
-                <div class="logo-container fade-in">
-                    <i class="fas fa-mountain logo-icon"></i>
-                    <h1 class="company-name">Nepal Himalayan Journeys</h1>
-                    <p class="tagline">Experience the Majesty of the Himalayas with Expert Guides. Connect with us directly via WhatsApp for personalized service.</p>
-                    <div class="whatsapp-badge slide-up">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Direct WhatsApp Support: +977 9766481043</span>
-                    </div>
-                </div>
+        <header class="header hardware-accelerated">
+            <i class="fas fa-mountain logo"></i>
+            <h1 class="company-name">Nepal Himalayan Journeys</h1>
+            <p class="tagline">Contact us via WhatsApp for personalized trekking itineraries</p>
+            <div class="whatsapp-badge">
+                <i class="fab fa-whatsapp"></i>
+                <span>+977 9766481043</span>
             </div>
         </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="container">
-                <div class="form-container slide-up">
-                    <h2 class="form-title">
-                        <i class="fab fa-whatsapp"></i>
-                        <span class="text-gradient">WhatsApp Trekking Inquiry Form</span>
-                    </h2>
-                    
-                    <p style="margin-bottom: var(--space-xl); color: var(--dark-gray); font-size: 1.1rem; line-height: 1.6;">
-                        Fill out this form and send it directly to our WhatsApp. Our expert team will respond within 1 hour with a personalized itinerary.
-                    </p>
+        <!-- Main Form -->
+        <div class="form-container hardware-accelerated">
+            <h2 class="form-title">
+                <i class="fab fa-whatsapp"></i>
+                Trekking Inquiry Form
+            </h2>
 
-                    <form id="travel-inquiry-form">
-                        <!-- Personal Information -->
-                        <div class="form-group">
-                            <h3 style="margin-bottom: var(--space-lg); color: var(--primary);">Personal Information</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="full-name" class="required">Full Name</label>
-                                    <div class="input-wrapper">
-                                        <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
-                                        <i class="fas fa-user input-icon"></i>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" class="required">Email Address</label>
-                                    <div class="input-wrapper">
-                                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
-                                        <i class="fas fa-envelope input-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="phone" class="required">Phone Number (WhatsApp)</label>
-                                    <div class="input-wrapper">
-                                        <input type="tel" id="phone" name="phone" required placeholder="Enter your WhatsApp number">
-                                        <i class="fas fa-phone input-icon"></i>
-                                    </div>
-                                    <small style="color: var(--gray); margin-top: 0.5rem; display: block;">Include country code (e.g., +1, +44, +977)</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nationality" class="required">Nationality</label>
-                                    <div class="select-wrapper">
-                                        <select id="nationality" name="nationality" required>
-                                            <option value="">Select your country</option>
-                                            <option value="United States">🇺🇸 United States</option>
-                                            <option value="United Kingdom">🇬🇧 United Kingdom</option>
-                                            <option value="Canada">🇨🇦 Canada</option>
-                                            <option value="Australia">🇦🇺 Australia</option>
-                                            <option value="Germany">🇩🇪 Germany</option>
-                                            <option value="France">🇫🇷 France</option>
-                                            <option value="Italy">🇮🇹 Italy</option>
-                                            <option value="Spain">🇪🇸 Spain</option>
-                                            <option value="Japan">🇯🇵 Japan</option>
-                                            <option value="South Korea">🇰🇷 South Korea</option>
-                                            <option value="China">🇨🇳 China</option>
-                                            <option value="India">🇮🇳 India</option>
-                                            <option value="Singapore">🇸🇬 Singapore</option>
-                                            <option value="Malaysia">🇲🇾 Malaysia</option>
-                                            <option value="Thailand">🇹🇭 Thailand</option>
-                                            <option value="Vietnam">🇻🇳 Vietnam</option>
-                                            <option value="Indonesia">🇮🇩 Indonesia</option>
-                                            <option value="Philippines">🇵🇭 Philippines</option>
-                                            <option value="Nepal">🇳🇵 Nepal</option>
-                                            <option value="Bhutan">🇧🇹 Bhutan</option>
-                                            <option value="Sri Lanka">🇱🇰 Sri Lanka</option>
-                                            <option value="Bangladesh">🇧🇩 Bangladesh</option>
-                                            <option value="Pakistan">🇵🇰 Pakistan</option>
-                                            <option value="Afghanistan">🇦🇫 Afghanistan</option>
-                                            <option value="Iran">🇮🇷 Iran</option>
-                                            <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
-                                            <option value="United Arab Emirates">🇦🇪 United Arab Emirates</option>
-                                            <option value="Qatar">🇶🇦 Qatar</option>
-                                            <option value="Kuwait">🇰🇼 Kuwait</option>
-                                            <option value="Oman">🇴🇲 Oman</option>
-                                            <option value="South Africa">🇿🇦 South Africa</option>
-                                            <option value="Kenya">🇰🇪 Kenya</option>
-                                            <option value="Nigeria">🇳🇬 Nigeria</option>
-                                            <option value="Egypt">🇪🇬 Egypt</option>
-                                            <option value="Morocco">🇲🇦 Morocco</option>
-                                            <option value="Brazil">🇧🇷 Brazil</option>
-                                            <option value="Argentina">🇦🇷 Argentina</option>
-                                            <option value="Mexico">🇲🇽 Mexico</option>
-                                            <option value="Chile">🇨🇱 Chile</option>
-                                            <option value="Peru">🇵🇪 Peru</option>
-                                            <option value="Colombia">🇨🇴 Colombia</option>
-                                            <option value="Russia">🇷🇺 Russia</option>
-                                            <option value="Ukraine">🇺🇦 Ukraine</option>
-                                            <option value="Poland">🇵🇱 Poland</option>
-                                            <option value="Czech Republic">🇨🇿 Czech Republic</option>
-                                            <option value="Hungary">🇭🇺 Hungary</option>
-                                            <option value="Austria">🇦🇹 Austria</option>
-                                            <option value="Switzerland">🇨🇭 Switzerland</option>
-                                            <option value="Netherlands">🇳🇱 Netherlands</option>
-                                            <option value="Belgium">🇧🇪 Belgium</option>
-                                            <option value="Sweden">🇸🇪 Sweden</option>
-                                            <option value="Norway">🇳🇴 Norway</option>
-                                            <option value="Denmark">🇩🇰 Denmark</option>
-                                            <option value="Finland">🇫🇮 Finland</option>
-                                            <option value="Ireland">🇮🇪 Ireland</option>
-                                            <option value="Portugal">🇵🇹 Portugal</option>
-                                            <option value="Greece">🇬🇷 Greece</option>
-                                            <option value="Turkey">🇹🇷 Turkey</option>
-                                            <option value="Israel">🇮🇱 Israel</option>
-                                            <option value="New Zealand">🇳🇿 New Zealand</option>
-                                            <option value="Fiji">🇫🇯 Fiji</option>
-                                            <option value="Other">🌍 Other Country</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Gender</label>
-                                <div class="radio-group">
-                                    <div class="radio-option">
-                                        <input type="radio" id="male" name="gender" value="Male" checked>
-                                        <label for="male">Male</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="female" name="gender" value="Female">
-                                        <label for="female">Female</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="other" name="gender" value="Other">
-                                        <label for="other">Other</label>
-                                    </div>
-                                </div>
-                            </div>
+            <form id="travel-inquiry-form">
+                <!-- Personal Info -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="full-name" class="required">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required placeholder="Your full name">
                         </div>
-
-                        <!-- Travel Details -->
-                        <div class="form-group">
-                            <h3 style="margin-bottom: var(--space-lg); color: var(--primary);">Travel Details</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="group-size" class="required">Number of Travelers</label>
-                                    <select id="group-size" name="group-size" required>
-                                        <option value="">Select group size</option>
-                                        <option value="1">1 Person (Solo)</option>
-                                        <option value="2">2 People</option>
-                                        <option value="3-5">3-5 People</option>
-                                        <option value="6-10">6-10 People</option>
-                                        <option value="11-15">11-15 People</option>
-                                        <option value="16-20">16-20 People</option>
-                                        <option value="21+">21+ People</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="travel-date" class="required">Preferred Travel Date</label>
-                                    <div class="input-wrapper">
-                                        <input type="date" id="travel-date" name="travel-date" required>
-                                        <i class="fas fa-calendar-alt input-icon"></i>
-                                    </div>
-                                    <small style="color: var(--gray); margin-top: 0.5rem; display: block;">Best seasons: March-May & September-November</small>
-                                </div>
-                            </div>
+                        <div>
+                            <label for="email" class="required">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your email address">
                         </div>
-
-                        <!-- Trekking Destinations - Expanded -->
-                        <div class="destinations-section">
-                            <h3 class="section-title">
-                                <i class="fas fa-mountain"></i>
-                                Trekking Routes of Interest
-                            </h3>
-                            <div class="destinations-grid" id="trekking-routes-group">
-                                <!-- Will be populated by JavaScript -->
-                            </div>
-                        </div>
-
-                        <!-- Adventure Activities -->
-                        <div class="destinations-section">
-                            <h3 class="section-title">
-                                <i class="fas fa-hiking"></i>
-                                Adventure Activities
-                            </h3>
-                            <div class="destinations-grid" id="adventure-activities-group">
-                                <!-- Will be populated by JavaScript -->
-                            </div>
-                        </div>
-
-                        <!-- Cultural & City Tours -->
-                        <div class="destinations-section">
-                            <h3 class="section-title">
-                                <i class="fas fa-landmark"></i>
-                                Cultural & City Tours
-                            </h3>
-                            <div class="destinations-grid" id="cultural-tours-group">
-                                <!-- Will be populated by JavaScript -->
-                            </div>
-                        </div>
-
-                        <!-- Special Requests -->
-                        <div class="form-group">
-                            <h3 style="margin-bottom: var(--space-lg); color: var(--primary);">Additional Information</h3>
-                            <label for="special-requests">Special Requests & Preferences</label>
-                            <div class="input-wrapper">
-                                <textarea id="special-requests" name="special-requests" placeholder="Tell us about your dietary restrictions, accommodation preferences, fitness level, previous trekking experience, medical conditions, or any other special requirements..."></textarea>
-                                <i class="fas fa-edit input-icon"></i>
-                            </div>
-                            <small style="color: var(--gray); margin-top: 0.5rem; display: block;">The more details you provide, the better we can customize your experience</small>
-                        </div>
-
-                        <!-- Submit Section -->
-                        <div class="submit-section">
-                            <button type="button" class="btn-whatsapp" id="whatsapp-btn">
-                                <i class="fab fa-whatsapp"></i>
-                                Send to WhatsApp
-                            </button>
-                            <p class="submit-note">Your inquiry will be sent directly to +977 9766481043 via WhatsApp</p>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </main>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="phone" class="required">WhatsApp Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+977 9766481043">
+                            <small style="color: var(--gray); font-size: 12px; display: block; margin-top: 4px;">
+                                Include country code
+                            </small>
+                        </div>
+                        <div>
+                            <label for="nationality" class="required">Nationality</label>
+                            <select id="nationality" name="nationality" required>
+                                <option value="">Select country</option>
+                                <option value="United States">🇺🇸 USA</option>
+                                <option value="United Kingdom">🇬🇧 UK</option>
+                                <option value="Canada">🇨🇦 Canada</option>
+                                <option value="Australia">🇦🇺 Australia</option>
+                                <option value="Germany">🇩🇪 Germany</option>
+                                <option value="France">🇫🇷 France</option>
+                                <option value="Japan">🇯🇵 Japan</option>
+                                <option value="China">🇨🇳 China</option>
+                                <option value="India">🇮🇳 India</option>
+                                <option value="Nepal">🇳🇵 Nepal</option>
+                                <option value="Other">🌍 Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel Details -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="group-size" class="required">Travelers</label>
+                            <select id="group-size" name="group-size" required>
+                                <option value="">How many people?</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3-5">3-5 People</option>
+                                <option value="6-10">6-10 People</option>
+                                <option value="11+">11+ People</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="travel-date" class="required">Travel Date</label>
+                            <input type="date" id="travel-date" name="travel-date" required>
+                            <small style="color: var(--gray); font-size: 12px; display: block; margin-top: 4px;">
+                                Best seasons: Mar-May & Sep-Nov
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trekking Routes -->
+                <div class="form-group">
+                    <label class="required">Trekking Routes</label>
+                    <div class="destinations-grid hardware-accelerated">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="everest-base-camp" name="trekking" value="Everest Base Camp">
+                            <label for="everest-base-camp">Everest Base Camp</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="annapurna-circuit" name="trekking" value="Annapurna Circuit">
+                            <label for="annapurna-circuit">Annapurna Circuit</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="langtang-valley" name="trekking" value="Langtang Valley">
+                            <label for="langtang-valley">Langtang Valley</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="manaslu-circuit" name="trekking" value="Manaslu Circuit">
+                            <label for="manaslu-circuit">Manaslu Circuit</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="upper-mustang" name="trekking" value="Upper Mustang">
+                            <label for="upper-mustang">Upper Mustang</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="ghorepani-poonhill" name="trekking" value="Ghorepani Poonhill">
+                            <label for="ghorepani-poonhill">Ghorepani Poonhill</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="mardi-himal" name="trekking" value="Mardi Himal">
+                            <label for="mardi-himal">Mardi Himal</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="kanchenjunga" name="trekking" value="Kanchenjunga">
+                            <label for="kanchenjunga">Kanchenjunga</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities -->
+                <div class="form-group">
+                    <label>Activities & Tours</label>
+                    <div class="destinations-grid hardware-accelerated">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="kathmandu-tour" name="activities" value="Kathmandu Tour">
+                            <label for="kathmandu-tour">Kathmandu Tour</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="pokhara-tour" name="activities" value="Pokhara Tour">
+                            <label for="pokhara-tour">Pokhara Tour</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="chitwan-safari" name="activities" value="Chitwan Safari">
+                            <label for="chitwan-safari">Chitwan Safari</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="lumbini-tour" name="activities" value="Lumbini Tour">
+                            <label for="lumbini-tour">Lumbini Tour</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="paragliding" name="activities" value="Paragliding">
+                            <label for="paragliding">Paragliding</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="rafting" name="activities" value="Rafting">
+                            <label for="rafting">Rafting</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="helicopter-tour" name="activities" value="Helicopter Tour">
+                            <label for="helicopter-tour">Helicopter Tour</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="cultural-tour" name="activities" value="Cultural Tour">
+                            <label for="cultural-tour">Cultural Tour</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Requests -->
+                <div class="form-group">
+                    <label for="special-requests">Special Requests</label>
+                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Dietary restrictions, accommodation preferences, fitness level, etc."></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="submit-section">
+                    <button type="button" class="btn-whatsapp hardware-accelerated" id="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Send to WhatsApp
+                    </button>
+                    <p style="color: var(--gray); font-size: 14px; margin-top: 12px;">
+                        Message will be sent to +977 9766481043
+                    </p>
+                </div>
+            </form>
+        </div>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <i class="fas fa-mountain footer-logo"></i>
-                    <h2 class="company-name">Nepal Himalayan Journeys</h2>
-                    <p style="max-width: 600px; margin: 0 auto var(--space-xl); opacity: 0.9; line-height: 1.6;">
-                        Licensed and Registered Tourism Company • Everest Region Specialists • Sustainable Tourism Advocates • 24/7 WhatsApp Support
-                    </p>
-                    
-                    <div class="contact-grid">
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <div class="contact-label">WhatsApp</div>
-                            <div class="contact-value">+977 9766481043</div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="contact-label">Email</div>
-                            <div class="contact-value">gaurabpromo@gmail.com</div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="contact-label">Location</div>
-                            <div class="contact-value">Kathmandu, Nepal</div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div class="contact-label">Response Time</div>
-                            <div class="contact-value">Within 1 Hour</div>
-                        </div>
-                    </div>
-                    
-                    <div class="copyright">
-                        © 2023 Nepal Himalayan Journeys. All rights reserved.<br>
-                        Crafting Unforgettable Himalayan Experiences Since 2010
-                    </div>
+        <footer class="footer hardware-accelerated">
+            <i class="fas fa-mountain" style="font-size: 36px; margin-bottom: 16px; color: var(--secondary);"></i>
+            <h3 style="margin-bottom: 8px; font-size: 20px;">Nepal Himalayan Journeys</h3>
+            <p style="opacity: 0.9; margin-bottom: 24px;">Expert Trekking Guides • 24/7 Support</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div style="margin-top: 8px; font-weight: 600;">WhatsApp</div>
+                    <div>+977 9766481043</div>
                 </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div style="margin-top: 8px; font-weight: 600;">Email</div>
+                    <div>gaurabpromo@gmail.com</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div style="margin-top: 8px; font-weight: 600;">Location</div>
+                    <div>Kathmandu, Nepal</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 14px; opacity: 0.7;">
+                © 2023 Nepal Himalayan Journeys. All rights reserved.
             </div>
         </footer>
     </div>
 
+    <!-- Notification -->
+    <div class="notification hardware-accelerated" id="notification">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fab fa-whatsapp" style="color: var(--secondary); font-size: 20px;"></i>
+            <div>
+                <div style="font-weight: 600;">Success!</div>
+                <div style="font-size: 14px; opacity: 0.9;">Opening WhatsApp...</div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Destinations Data
-        const destinations = {
-            trekking: [
-                { id: 'everest-base-camp', name: 'Everest Base Camp', duration: '12-14 days', difficulty: 'Challenging' },
-                { id: 'everest-three-passes', name: 'Everest Three Passes', duration: '18-21 days', difficulty: 'Expert' },
-                { id: 'annapurna-circuit', name: 'Annapurna Circuit', duration: '15-20 days', difficulty: 'Moderate' },
-                { id: 'annapurna-base-camp', name: 'Annapurna Base Camp', duration: '10-12 days', difficulty: 'Moderate' },
-                { id: 'manaslu-circuit', name: 'Manaslu Circuit', duration: '14-18 days', difficulty: 'Challenging' },
-                { id: 'langtang-valley', name: 'Langtang Valley', duration: '8-10 days', difficulty: 'Moderate' },
-                { id: 'upper-mustang', name: 'Upper Mustang', duration: '12-14 days', difficulty: 'Moderate' },
-                { id: 'kanchenjunga', name: 'Kanchenjunga Base Camp', duration: '20-25 days', difficulty: 'Expert' },
-                { id: 'makalu-base-camp', name: 'Makalu Base Camp', duration: '18-22 days', difficulty: 'Expert' },
-                { id: 'ghorepani-poonhill', name: 'Ghorepani Poonhill', duration: '5-7 days', difficulty: 'Easy' },
-                { id: 'mardi-himal', name: 'Mardi Himal', duration: '6-8 days', difficulty: 'Moderate' },
-                { id: 'gokyo-lakes', name: 'Gokyo Lakes', duration: '12-14 days', difficulty: 'Moderate' },
-                { id: 'tilicho-lake', name: 'Tilicho Lake', duration: '14-16 days', difficulty: 'Challenging' },
-                { id: 'nar-phu-valley', name: 'Nar Phu Valley', duration: '16-18 days', difficulty: 'Challenging' },
-                { id: 'tsum-valley', name: 'Tsum Valley', duration: '18-21 days', difficulty: 'Challenging' },
-                { id: 'rolwaling-valley', name: 'Rolwaling Valley', duration: '16-18 days', difficulty: 'Expert' },
-                { id: 'dhaulagiri-circuit', name: 'Dhaulagiri Circuit', duration: '18-21 days', difficulty: 'Expert' },
-                { id: 'rara-lake', name: 'Rara Lake', duration: '10-12 days', difficulty: 'Moderate' },
-                { id: 'shey-phoksundo', name: 'Shey Phoksundo', duration: '12-15 days', difficulty: 'Moderate' },
-                { id: 'lower-dolpo', name: 'Lower Dolpo', duration: '18-21 days', difficulty: 'Challenging' },
-            ],
+        // Performance Optimized JavaScript
+        (function() {
+            'use strict';
             
-            adventure: [
-                { id: 'paragliding', name: 'Paragliding in Pokhara', duration: '1-2 days' },
-                { id: 'bungee-jumping', name: 'Bungee Jumping', duration: '1 day' },
-                { id: 'white-water-rafting', name: 'White Water Rafting', duration: '1-3 days' },
-                { id: 'mountain-biking', name: 'Mountain Biking', duration: '1-7 days' },
-                { id: 'rock-climbing', name: 'Rock Climbing', duration: '1-3 days' },
-                { id: 'jungle-safari', name: 'Jungle Safari', duration: '2-4 days' },
-                { id: 'bird-watching', name: 'Bird Watching', duration: '1-5 days' },
-                { id: 'zip-lining', name: 'Zip Lining', duration: '1 day' },
-                { id: 'ultralight-flight', name: 'Ultralight Flight', duration: '1 day' },
-                { id: 'helicopter-tour', name: 'Helicopter Tour', duration: '1 day' },
-                { id: 'yak-safari', name: 'Yak Safari', duration: '2-3 days' },
-                { id: 'canoeing', name: 'Canoeing/Kayaking', duration: '1-2 days' },
-                { id: 'canyoning', name: 'Canyoning', duration: '1 day' },
-                { id: 'motorbike-tour', name: 'Motorbike Tour', duration: '3-14 days' },
-                { id: 'fishing', name: 'Fishing Tour', duration: '1-3 days' },
-            ],
+            // DOM Elements - Cached for Performance
+            const form = document.getElementById('travel-inquiry-form');
+            const whatsappBtn = document.getElementById('whatsapp-btn');
+            const notification = document.getElementById('notification');
             
-            cultural: [
-                { id: 'kathmandu-valley', name: 'Kathmandu Valley Tour', duration: '2-4 days' },
-                { id: 'pokhara-lakeside', name: 'Pokhara Lakeside', duration: '2-3 days' },
-                { id: 'lumbini', name: 'Lumbini Buddhist Circuit', duration: '2-3 days' },
-                { id: 'chitwan-safari', name: 'Chitwan National Park', duration: '2-3 days' },
-                { id: 'nagarkot', name: 'Nagarkot Sunrise View', duration: '1-2 days' },
-                { id: 'bhaktapur', name: 'Bhaktapur Durbar Square', duration: '1 day' },
-                { id: 'patan', name: 'Patan Durbar Square', duration: '1 day' },
-                { id: 'bandipur', name: 'Bandipur Heritage', duration: '1-2 days' },
-                { id: 'gorkha', name: 'Gorkha Palace', duration: '1-2 days' },
-                { id: 'janakpur', name: 'Janakpur Temples', duration: '1-2 days' },
-                { id: 'muktinath', name: 'Muktinath Temple', duration: '2-3 days' },
-                { id: 'mustang-caves', name: 'Mustang Caves', duration: '3-4 days' },
-                { id: 'illam-tea', name: 'Ilam Tea Gardens', duration: '2-3 days' },
-                { id: 'tansen', name: 'Tansen Hill Station', duration: '1-2 days' },
-                { id: 'dhampus-sarangkot', name: 'Dhampus & Sarangkot', duration: '1-2 days' },
-                { id: 'everest-museum', name: 'Everest Museum', duration: 'Half day' },
-                { id: 'boudhanath', name: 'Boudhanath Stupa', duration: 'Half day' },
-                { id: 'swayambhunath', name: 'Swayambhunath Temple', duration: 'Half day' },
-                { id: 'pashupatinath', name: 'Pashupatinath Temple', duration: 'Half day' },
-                { id: 'changu-narayan', name: 'Changu Narayan Temple', duration: 'Half day' },
-            ]
-        };
-
-        // DOM Ready Function
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set date defaults
+            // Set default date
             const today = new Date().toISOString().split('T')[0];
-            const defaultDate = new Date();
-            defaultDate.setDate(defaultDate.getDate() + 60);
-            
+            const futureDate = new Date();
+            futureDate.setDate(futureDate.getDate() + 60);
             document.getElementById('travel-date').min = today;
-            document.getElementById('travel-date').value = defaultDate.toISOString().split('T')[0];
+            document.getElementById('travel-date').value = futureDate.toISOString().split('T')[0];
             
-            // Populate destinations
-            populateDestinations('trekking-routes-group', destinations.trekking);
-            populateDestinations('adventure-activities-group', destinations.adventure);
-            populateDestinations('cultural-tours-group', destinations.cultural);
-            
-            // Focus on first input
+            // Focus first input
             document.getElementById('full-name').focus();
-        });
-
-        function populateDestinations(containerId, items) {
-            const container = document.getElementById(containerId);
-            container.innerHTML = '';
             
-            items.forEach(item => {
-                const option = document.createElement('div');
-                option.className = 'checkbox-option';
-                option.innerHTML = `
-                    <input type="checkbox" id="${item.id}" name="${containerId}" value="${item.name}">
-                    <div>
-                        <label for="${item.id}" style="font-weight: 600; display: block;">${item.name}</label>
-                        <div style="font-size: 0.85rem; color: var(--gray); margin-top: 4px;">
-                            ${item.duration}${item.difficulty ? ' • ' + item.difficulty : ''}
-                        </div>
-                    </div>
-                `;
-                container.appendChild(option);
+            // WhatsApp Button Handler - Optimized
+            whatsappBtn.addEventListener('click', handleSubmit, { passive: true });
+            
+            // Form validation
+            function validateForm() {
+                const required = ['full-name', 'email', 'phone', 'nationality', 'group-size', 'travel-date'];
+                let valid = true;
                 
-                // Add checked class when checkbox is checked
-                const checkbox = option.querySelector('input');
-                checkbox.addEventListener('change', function() {
-                    option.classList.toggle('checked', this.checked);
+                for (let i = 0; i < required.length; i++) {
+                    const field = document.getElementById(required[i]);
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#EF4444';
+                        valid = false;
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                }
+                
+                // Check trekking selection
+                const trekkingSelected = document.querySelectorAll('input[name="trekking"]:checked').length > 0;
+                if (!trekkingSelected) {
+                    alert('Please select at least one trekking route.');
+                    valid = false;
+                }
+                
+                return valid;
+            }
+            
+            // Get form data efficiently
+            function getFormData() {
+                const getChecked = (name) => {
+                    const checked = [];
+                    const elements = document.querySelectorAll(`input[name="${name}"]:checked`);
+                    for (let i = 0; i < elements.length; i++) {
+                        checked.push(elements[i].value);
+                    }
+                    return checked;
+                };
+                
+                return {
+                    name: document.getElementById('full-name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    nationality: document.getElementById('nationality').value,
+                    groupSize: document.getElementById('group-size').value,
+                    date: document.getElementById('travel-date').value,
+                    trekking: getChecked('trekking'),
+                    activities: getChecked('activities'),
+                    requests: document.getElementById('special-requests').value,
+                    submitted: new Date().toLocaleDateString()
+                };
+            }
+            
+            // Create WhatsApp message
+            function createMessage(data) {
+                const list = (items) => items.length > 0 ? items.map(i => `• ${i}`).join('\n') : '• None';
+                
+                return `*Nepal Trekking Inquiry*
+
+*Personal Info*
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+Nationality: ${data.nationality}
+
+*Travel Details*
+Group: ${data.groupSize} people
+Date: ${data.date}
+
+*Trekking Routes*
+${list(data.trekking)}
+
+*Activities & Tours*
+${list(data.activities)}
+
+*Special Requests*
+${data.requests || 'None'}
+
+*Submitted:* ${data.submitted}
+
+---`;
+            }
+            
+            // Submit handler
+            function handleSubmit() {
+                if (!validateForm()) return;
+                
+                const data = getFormData();
+                const message = createMessage(data);
+                const phone = '9779766481043';
+                const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+                
+                // Show notification
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+                
+                // Open WhatsApp
+                setTimeout(() => {
+                    window.open(url, '_blank');
+                }, 500);
+            }
+            
+            // Performance: Debounce scroll events if needed
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    // Any scroll-related logic here
+                }, 100);
+            }, { passive: true });
+            
+            // Optimize input events
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.backgroundColor = '#FFFFFF';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.backgroundColor = '';
                 });
             });
-        }
-
-        // WhatsApp Button Handler
-        document.getElementById('whatsapp-btn').addEventListener('click', function() {
-            if (validateForm()) {
-                const formData = getFormData();
-                sendToWhatsApp(formData);
-            }
-        });
-
-        function validateForm() {
-            const requiredFields = ['full-name', 'email', 'phone', 'nationality', 'group-size', 'travel-date'];
-            let isValid = true;
-            let firstError = null;
             
-            // Check required fields
-            requiredFields.forEach(fieldId => {
-                const field = document.getElementById(fieldId);
-                if (!field.value.trim()) {
-                    field.style.borderColor = 'var(--error)';
-                    field.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.1)';
-                    isValid = false;
-                    if (!firstError) firstError = field;
-                } else {
-                    field.style.borderColor = '';
-                    field.style.boxShadow = '';
-                }
-            });
-            
-            // Check if at least one trekking route is selected
-            const trekkingRoutes = document.querySelectorAll('input[name="trekking-routes-group"]:checked');
-            if (trekkingRoutes.length === 0) {
-                alert('Please select at least one trekking route.');
-                isValid = false;
-            }
-            
-            // Validate email
-            const emailField = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailField.value && !emailRegex.test(emailField.value)) {
-                emailField.style.borderColor = 'var(--error)';
-                emailField.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.1)';
-                alert('Please enter a valid email address.');
-                isValid = false;
-                if (!firstError) firstError = emailField;
-            }
-            
-            // Validate phone
-            const phoneField = document.getElementById('phone');
-            const phoneRegex = /^[+]?[0-9\s\-\(\)]{10,}$/;
-            if (phoneField.value && !phoneRegex.test(phoneField.value)) {
-                phoneField.style.borderColor = 'var(--error)';
-                phoneField.style.boxShadow = '0 0 0 4px rgba(239, 68, 68, 0.1)';
-                alert('Please enter a valid phone number with country code.');
-                isValid = false;
-                if (!firstError) firstError = phoneField;
-            }
-            
-            // Scroll to first error
-            if (firstError) {
-                firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                firstError.focus();
-            }
-            
-            return isValid;
-        }
-
-        function getFormData() {
-            const getCheckedValues = (name) => {
-                return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
-                    .map(cb => cb.value);
-            };
-            
-            return {
-                fullName: document.getElementById('full-name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                nationality: document.getElementById('nationality').value,
-                gender: document.querySelector('input[name="gender"]:checked').value,
-                groupSize: document.getElementById('group-size').value,
-                travelDate: document.getElementById('travel-date').value,
-                trekkingRoutes: getCheckedValues('trekking-routes-group'),
-                adventureActivities: getCheckedValues('adventure-activities-group'),
-                culturalTours: getCheckedValues('cultural-tours-group'),
-                specialRequests: document.getElementById('special-requests').value,
-                submissionDate: new Date().toLocaleString('en-US', {
-                    dateStyle: 'full',
-                    timeStyle: 'short'
-                })
-            };
-        }
-
-        function sendToWhatsApp(formData) {
-            const phoneNumber = "9779766481043";
-            const message = formatWhatsAppMessage(formData);
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            
-            // Button loading state
-            const btn = document.getElementById('whatsapp-btn');
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening WhatsApp...';
-            btn.disabled = true;
-            
-            // Open WhatsApp with delay for UX
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-                
-                // Reset button and show success
-                setTimeout(() => {
-                    btn.innerHTML = originalHTML;
-                    btn.disabled = false;
-                    showSuccessMessage();
-                }, 2000);
-            }, 800);
-        }
-
-        function formatWhatsAppMessage(formData) {
-            const formatList = (items) => items.length > 0 
-                ? items.map(item => `• ${item}`).join('\n')
-                : '• None selected';
-            
-            return `*New Trekking Inquiry - Nepal Himalayan Journeys*
-
-*PERSONAL INFORMATION*
-👤 Name: ${formData.fullName}
-📧 Email: ${formData.email}
-📞 Phone: ${formData.phone}
-🌍 Nationality: ${formData.nationality}
-⚤ Gender: ${formData.gender}
-
-*TRAVEL DETAILS*
-👥 Group Size: ${formData.groupSize} people
-📅 Preferred Date: ${formData.travelDate}
-
-*TREKKING ROUTES INTERESTED IN*
-${formatList(formData.trekkingRoutes)}
-
-*ADVENTURE ACTIVITIES*
-${formatList(formData.adventureActivities)}
-
-*CULTURAL & CITY TOURS*
-${formatList(formData.culturalTours)}
-
-*SPECIAL REQUESTS & PREFERENCES*
-${formData.specialRequests || 'None provided'}
-
-*Submitted:* ${formData.submissionDate}
-
----
-*This inquiry was submitted via Nepal Himalayan Journeys WhatsApp Form.*`;
-        }
-
-        function showSuccessMessage() {
-            const message = document.createElement('div');
-            message.style.cssText = `
-                position: fixed;
-                top: 30px;
-                right: 30px;
-                background: var(--gradient-secondary);
-                color: white;
-                padding: 20px 25px;
-                border-radius: var(--radius-lg);
-                box-shadow: var(--shadow-2xl);
-                z-index: 10000;
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-                max-width: 400px;
-                backdrop-filter: blur(20px);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-            `;
-            
-            message.innerHTML = `
-                <i class="fab fa-whatsapp" style="font-size: 2rem;"></i>
-                <div>
-                    <strong style="display: block; margin-bottom: 5px;">Inquiry Sent Successfully!</strong>
-                    <small style="opacity: 0.9;">Your inquiry has been sent to WhatsApp. We'll respond within 1 hour.</small>
-                </div>
-            `;
-            
-            document.body.appendChild(message);
-            
-            // Add animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideInRight {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-                @keyframes fadeOutUp {
-                    from { opacity: 1; transform: translateY(0); }
-                    to { opacity: 0; transform: translateY(-20px); }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // Remove after 5 seconds
-            setTimeout(() => {
-                message.style.animation = 'fadeOutUp 0.5s ease forwards';
-                setTimeout(() => {
-                    if (message.parentNode) {
-                        message.parentNode.removeChild(message);
-                    }
-                    document.head.removeChild(style);
-                }, 500);
-            }, 5000);
-        }
+        })();
+        
+        // Performance: Load everything after initial render
+        window.addEventListener('load', function() {
+            // Any additional setup
+        }, { passive: true });
     </script>
 </body>
 </html>
